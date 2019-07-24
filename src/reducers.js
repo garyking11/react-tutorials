@@ -5,10 +5,18 @@ import {
     REQUEST_ROBOTS_FAILED
 } from './constants.js';
 
+/**
+ * @type {{searchField: string}}
+ */
 const initialStateSearch =  {
     searchField: ''
 }
 
+/**
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 export const searchRobots = (state=initialStateSearch, action={}) => {
     switch(action.type){
         case CHANGE_SEARCH_FIELD:
@@ -17,12 +25,20 @@ export const searchRobots = (state=initialStateSearch, action={}) => {
     }
 }
 
+/**
+ * @type {{isPending: boolean, robots: Array, error: string}}
+ */
 const initialStateRobots = {
     isPending: false,
     robots: [],
     error: ''
 }
 
+/**
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 export const requestRobots = (state=initialStateRobots, action={}) =>  {
     switch (action.type) {
         case REQUEST_ROBOTS_PENDING:

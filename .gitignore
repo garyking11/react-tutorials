@@ -8,7 +8,13 @@
 .idea/workspace.xml
 # testing
 /coverage
+/webpack-project/node_modules
+/perform/node_modules
+/parcel/node_modules
 
+/webpack-project/node_modules
+/perform/node_modules
+                    /parcel/node_modules
 # production
 /build
 

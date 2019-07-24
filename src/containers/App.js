@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import {setSearchField, requestRobots} from '../actions';
 
-// Constants
+/**
+ *
+ * @param state
+ * @returns {{searchField: (*|string), robots: (*|Array|Function), isPending: *, error: *}}
+ */
 const mapStateToProps = state => {
     return {
         searchField: state.searchRobots.searchField,
@@ -16,6 +20,11 @@ const mapStateToProps = state => {
     }
 }
 
+/**
+ *
+ * @param dispatch
+ * @returns {{onSearchChange: (function(*): *), onRequestRobots: (function(): *)}}
+ */
 const mapDispatchToProps = (dispatch) => {
     return {
         onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
@@ -23,15 +32,20 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
+
 class App extends Component {
 
     componentDidMount() {
-     this.props.onRequestRobots();
+        this.props.onRequestRobots();
     }
 
+    /**
+     *
+     * @returns {XML}
+     */
     render() {
-         
-        const { searchField, onSearchChange, robots, isPending } = this.props;
+
+        const {searchField, onSearchChange, robots, isPending} = this.props;
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
