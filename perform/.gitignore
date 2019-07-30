@@ -2,12 +2,12 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 /webpack-project/node_modules
 /perform/node_modules
 /parcel/node_modules
 
+/.pnp
+.pnp.js
 # testing
 /coverage
 
