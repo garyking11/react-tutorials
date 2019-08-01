@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+
+<fieldset id="preferred-day" class="radio-group full">
+    <div id="prefDateError" class="error"></div>
+    <p class="loud"><span>Preferred Day:</span></p>
+    <label class="first unitx3" for="Days_Available_No_Preference">
+        <input id="Days_Available_No_Preference"
+            name="sc_form[Preferred_Day]" type="checkbox"
+            value="No Preference" />
+        <span>No Preference</span> </label> <label class="unitx3" for="Days_Available_Monday"> <input
+        id="Days_Available_Monday" name="sc_form[Preferred_Day]" type="checkbox" value="Monday"/> <span>Monday</span>
+</label> <label class="first unitx3" for="Days_Available_Tuesday"> 
+        <input id="Days_Available_Tuesday"
+            name="sc_form[Preferred_Day]" type="checkbox"
+            value="Tuesday"/> <span>Tuesday</span>
+
+</label> <label class="first unitx3" for="Days_Available_Thursday"> 
+    <input id="Days_Available_Thursday"
+        name="sc_form[Preferred_Day]" type="checkbox"
+        value="Thursday"/> <span>Thursday</span>
+
+</label> <label class="unitx3" for="Days_Available_Friday"> 
+    <input id="Days_Available_Friday"
+        name="sc_form[Preferred_Day]" type="checkbox"
+        value="Friday"/> <span>Friday</span> </label>
+</fieldset>
+
+
+
+
+<fieldset id="preferred-time" class="radio-group full">
+    <div id="prefTimeError" class="error"></div>
+    <p class="loud"><span>Preferred Time:</span></p>
+    <label class="first unitx3" for="Times_Available_No_Preference">
+        <input id="Times_Available_No_Preference"
+        name="sc_form[Times_Available]"
+        type="checkbox" value="No Preference"/>
+        <span>No Preference</span> </label> <label class="unitx3" for="Times_Available_Morning"> <input
+        id="Times_Available_Morning" name="sc_form[Times_Available]" type="checkbox" value="Morning"/>
+    <span>Morning</span> </label> <label class="first unitx3" for="Times_Available_Afternoon"> <input
+        id="Times_Available_Afternoon" name="sc_form[Times_Available]" type="checkbox" value="Afternoon"/> <span>Afternoon</span>
+</label></fieldset>
+
+
+
+<hr/>
+</fieldset>
+
+<fieldset>
+    <div id="notify"></div>
+    <button id="submitBtn" class="button button-medium site-button-color box-round box-shadow" type="submit">Submit Request</button>
+</fieldset>
+</form>
+
+
+ 
+
+<script src="validate-checkbox.js"></script>
+</body>
+</html>
