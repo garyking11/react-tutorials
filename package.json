@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://garyking11.github.io/react-tutorials",
   "dependencies": {
+    "@types/react": "^16.8.24",
     "create-react-app": "^3.0.1",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
